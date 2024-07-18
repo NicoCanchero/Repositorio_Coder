@@ -1,0 +1,42 @@
+.contenedorGrilla {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: "mainGrilla asideGrilla";
+  .mainGrilla {
+    grid-area: mainGrilla;
+    section {
+      .subtitle {
+        background-color: $bgSubtitle;
+        color: black;
+        text-align: center;
+      }
+      .subtitle1 {
+        line-height: 1.3;
+        font-size: 2rem;
+        font-family: "Farsan", cursive;
+        text-align: center;
+      }
+      .img1 {
+        width: 500px;
+        border-radius: 20%;
+        padding: 20px;
+      }
+    }
+  }
+  .asideGrilla {
+    grid-area: asideGrilla;
+    section {
+      .subtitle {
+        background-color: $bgSubtitle;
+        color: black;
+        text-align: center;
+      }
+      p {
+        line-height: 1.3;
+        font-size: 1.3rem;
+        font-family: "Farsan", cursive;
+      }
+    }
+  }
+}

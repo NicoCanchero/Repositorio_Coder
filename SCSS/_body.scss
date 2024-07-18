@@ -1,0 +1,15 @@
+body {
+  background-color: #86cac58e;
+  font-family: "Raleway-regular";
+  @import "header";
+  @import "main_index";
+  @import "main_aboutus";
+  @import "main_contactus";
+  @import "main_gallery";
+  @import "footer";
+  .subtitle {
+    background-color: $bgSubtitle;
+    color: black;
+    text-align: center;
+  }
+}

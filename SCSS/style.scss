@@ -1,0 +1,22 @@
+@import "var";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Raleway-regular";
+  src: url(../font/Raleway-Regular.ttf);
+}
+@import "body";
+
+@media screen and (max-width: 768px) {
+  .contenedorGrilla {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mainGrilla"
+      "asideGrilla";
+  }
+}

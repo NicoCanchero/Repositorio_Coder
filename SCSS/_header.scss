@@ -1,0 +1,42 @@
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6cf;
+  text-align: center;
+  img {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+    width: 15vw;
+    align-self: center;
+    border-radius: 10%;
+    padding: 20px;
+  }
+  h1 {
+    color: black;
+    padding: 10px;
+  }
+  h2 {
+    color: black;
+    padding: 10px;
+  }
+  nav {
+    ul {
+      list-style-type: none;
+      li {
+        padding: 10px;
+        color: black;
+        display: inline-block;
+        a {
+          color: black;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

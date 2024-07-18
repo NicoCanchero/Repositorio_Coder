@@ -1,7 +1,7 @@
-/*reseteo de codigo*/
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -9,45 +9,17 @@
   src: url(../font/Raleway-Regular.ttf);
 }
 body {
-  background-color: #86cac58e;
+  background-color: rgba(134, 202, 197, 0.5568627451);
   font-family: "Raleway-regular";
 }
-.contenedorGrilla {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 5fr 1fr;
-  grid-template-areas: "mainGrilla asideGrilla";
-}
-
-@media screen and (max-width: 768px) {
-  .contenedorGrilla {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "mainGrilla"
-      "asideGrilla";
-  }
-}
-.mainGrilla {
-  grid-area: mainGrilla;
-}
-.asideGrilla {
-  grid-area: asideGrilla;
-}
-
-header {
+body header {
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #e6e6cf;
   text-align: center;
 }
-header h1,
-h2 {
-  color: black;
-  padding: 10px;
-}
-header img {
+body header img {
   position: absolute;
   top: -30px;
   left: 0;
@@ -58,136 +30,160 @@ header img {
   border-radius: 10%;
   padding: 20px;
 }
-
-header nav ul {
+body header h1 {
+  color: black;
+  padding: 10px;
+}
+body header h2 {
+  color: black;
+  padding: 10px;
+}
+body header nav ul {
   list-style-type: none;
 }
-li {
+body header nav ul li {
   padding: 10px;
   color: black;
   display: inline-block;
 }
-a {
+body header nav ul li a {
   color: black;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
 }
-
-.aboutus p {
-  background-color: hsla(0, 0%, 94%, 0.6);
+body .contenedorGrilla {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: "mainGrilla asideGrilla";
 }
-.subtitle {
+body .contenedorGrilla .mainGrilla {
+  grid-area: mainGrilla;
+}
+body .contenedorGrilla .mainGrilla section .subtitle {
   background-color: hsla(0, 0%, 94%, 0.6);
   color: black;
   text-align: center;
 }
-
-.subtitle1 {
+body .contenedorGrilla .mainGrilla section .subtitle1 {
   line-height: 1.3;
   font-size: 2rem;
   font-family: "Farsan", cursive;
   text-align: center;
 }
-p {
-  line-height: 1.3;
-  font-size: 1.3rem;
-  font-family: "Farsan", cursive;
-}
-
-.img1 {
+body .contenedorGrilla .mainGrilla section .img1 {
   width: 500px;
   border-radius: 20%;
   padding: 20px;
 }
-
-footer {
-  margin: 20px auto;
-  background-color: #e6e6cf;
-  padding: 20px;
+body .contenedorGrilla .asideGrilla {
+  grid-area: asideGrilla;
 }
-
-.footerText {
-  display: flex;
-  justify-content: space-between;
+body .contenedorGrilla .asideGrilla section .subtitle {
+  background-color: hsla(0, 0%, 94%, 0.6);
+  color: black;
+  text-align: center;
 }
-
-.footerText h4 {
-  margin: 0;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+body .contenedorGrilla .asideGrilla section p {
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-family: "Farsan", cursive;
 }
-
-h4 {
-  display: inline-block;
-  margin: 0 10px;
+body .aboutus {
+  background-image: url(../IMG/bg\ aboutus.jpg);
 }
-
-.formulario1 {
+body .aboutus .subtitle {
+  background-color: hsla(0, 0%, 94%, 0.6);
+  color: black;
+  text-align: center;
+}
+body .aboutus p {
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-family: "Farsan", cursive;
+  background-color: hsla(0, 0%, 94%, 0.6);
+}
+body .contactus .subtitle {
+  background-color: hsla(0, 0%, 94%, 0.6);
+  color: black;
+  text-align: center;
+}
+body .contactus p {
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-family: "Farsan", cursive;
+}
+body .contactus .formulario1 {
   width: 500;
   text-align: center;
   margin: 10px auto;
 }
-
-.aboutus {
-  background-image: url(../IMG/bg\ aboutus.jpg);
-}
-
-.productos {
+body .galeria {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-
-.galeria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+body .galeria .contenedorImagen {
+  position: relative;
+  max-width: 200px;
+  margin: 10px;
 }
-.galeria1 {
+body .galeria .contenedorImagen img {
   margin: 5px;
   width: 200px;
   height: 200px;
   border-radius: 10%;
   padding: 5px;
   display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.productos1 {
-  width: 200px;
-  border-radius: 10%;
-  padding: 5px;
-  display: inline-block;
-}
-
-.contenedorImagen {
-  position: relative; /* Positioning context for the text */
-  max-width: 200px; /* Adjust as needed */
-  margin: 10px; /* Adjust spacing between images */
-}
-.contenedorImagen img {
-  max-width: 100%; /* Ensures image doesn't exceed container width */
-  max-height: 100%; /* Ensures image doesn't exceed container height */
-}
-
-.imagenTexto1 {
-  opacity: 0;
-  position: absolute;
-  bottom: 15px; /* Adjust distance from the bottom */
-  left: 25px;
-  width: 80%;
-  text-align: center;
-  color: white; /* Text color */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-  padding: 5px; /* Adjust padding */
-  font-size: 12px; /* Adjust font size */
-  border-radius: 10%;
-}
-
-.contenedorImagen:hover .imagenTexto1 {
+body .galeria .contenedorImagen:hover .imagenTexto1 {
   opacity: 1;
   border: solid white 2px;
 }
+body .galeria .contenedorImagen .imagenTexto1 {
+  opacity: 0;
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  width: 80%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 10%;
+}
+body footer {
+  margin: 20px auto;
+  background-color: #e6e6cf;
+  padding: 20px;
+}
+body footer .footerText {
+  display: flex;
+  justify-content: space-between;
+}
+body footer .footerText h4 {
+  margin: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+body .subtitle {
+  background-color: hsla(0, 0%, 94%, 0.6);
+  color: black;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedorGrilla {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "mainGrilla" "asideGrilla";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
