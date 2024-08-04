@@ -13,22 +13,25 @@ body {
   font-family: "Raleway-regular";
 }
 body header {
-  position: relative;
+  position: relative; /* Allow header to move with scroll */
   display: flex;
   flex-direction: column;
   background-color: #e6e6cf;
+  padding-top: 20px; /* Add padding to ensure space for the fixed image */
   text-align: center;
+  width: 100%; /* Make sure header spans the full width */
 }
 body header img {
-  position: absolute;
-  top: -30px;
-  left: 0;
+  position: absolute; /* Fix the image to the viewport */
+  top: 5%;
+  left: 5%;
   object-fit: cover;
-  z-index: 0;
-  width: 15vw;
-  align-self: center;
+  width: 15vw; /* Adjust size as needed for responsiveness */
+  max-width: 200px; /* Optional: Set a max width to avoid it becoming too large */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 10%;
-  padding: 20px;
+  padding: 5px; /* Adjust padding if necessary */
+  z-index: 1; /* Ensure it stays above other header elements */
 }
 body header h1 {
   color: black;
