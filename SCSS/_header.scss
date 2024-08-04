@@ -30,6 +30,15 @@ header {
         padding: 10px;
         color: black;
         display: inline-block;
+        border: 2px solid transparent; /* Initial border */
+        background-color: transparent; /* Initial background color */
+        border-radius: 8px; /* Rounded corners */
+        transition: all 0.7s;
+        &:hover {
+          opacity: 1; /* Full opacity on hover */
+          border: 2px solid blue; /* Blue border on hover */
+          background-color: #e0f0ff; /* Light blue background on hover */
+        }
         a {
           color: black;
           font-size: 1.2rem;

@@ -1,5 +1,4 @@
 @import "var";
-
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +8,7 @@
   font-family: "Raleway-regular";
   src: url(../font/Raleway-Regular.ttf);
 }
+
 @import "body";
 
 @media screen and (max-width: 768px) {

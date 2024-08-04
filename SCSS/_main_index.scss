@@ -1,10 +1,13 @@
 .contenedorGrilla {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 4fr 2fr;
   grid-template-areas: "mainGrilla asideGrilla";
+
   .mainGrilla {
     grid-area: mainGrilla;
+    display: flex;
+    flex-direction: column;
     section {
       .subtitle {
         background-color: $bgSubtitle;
@@ -17,11 +20,35 @@
         font-family: "Farsan", cursive;
         text-align: center;
       }
-      .img1 {
-        width: 500px;
-        border-radius: 20%;
-        padding: 20px;
-      }
+    }
+    #carouselIndex {
+      display: flex;
+      align-self: center;
+      width: 100%;
+      max-width: 600px;
+    }
+    .carousel-item {
+      height: 500px;
+    }
+    .carousel-caption {
+      bottom: 10px; /* Position text at the bottom */
+      background: rgba(0, 0, 0, 0.5);
+      color: white; /* Text color */
+      border-radius: 5px; /* Rounded corners for text background */
+    }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    .carousel-control-prev {
+      left: 30px;
+    }
+
+    .carousel-control-next {
+      right: 30px;
     }
   }
   .asideGrilla {

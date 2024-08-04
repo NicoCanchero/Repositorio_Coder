@@ -1,11 +1,14 @@
 .aboutus {
   background-image: url(../IMG/bg\ aboutus.jpg);
   .subtitle {
+    margin: 10px;
+    padding: 1%;
     background-color: $bgSubtitle;
     color: black;
     text-align: center;
   }
   p {
+    padding: 5%;
     line-height: 1.3;
     font-size: 1.3rem;
     font-family: "Farsan", cursive;

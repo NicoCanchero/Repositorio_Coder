@@ -45,6 +45,15 @@ body header nav ul li {
   padding: 10px;
   color: black;
   display: inline-block;
+  border: 2px solid transparent; /* Initial border */
+  background-color: transparent; /* Initial background color */
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.7s;
+}
+body header nav ul li:hover {
+  opacity: 1; /* Full opacity on hover */
+  border: 2px solid blue; /* Blue border on hover */
+  background-color: #e0f0ff; /* Light blue background on hover */
 }
 body header nav ul li a {
   color: black;
@@ -55,11 +64,13 @@ body header nav ul li a {
 body .contenedorGrilla {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 4fr 2fr;
   grid-template-areas: "mainGrilla asideGrilla";
 }
 body .contenedorGrilla .mainGrilla {
   grid-area: mainGrilla;
+  display: flex;
+  flex-direction: column;
 }
 body .contenedorGrilla .mainGrilla section .subtitle {
   background-color: hsla(0, 0%, 94%, 0.6);
@@ -72,10 +83,33 @@ body .contenedorGrilla .mainGrilla section .subtitle1 {
   font-family: "Farsan", cursive;
   text-align: center;
 }
-body .contenedorGrilla .mainGrilla section .img1 {
-  width: 500px;
-  border-radius: 20%;
-  padding: 20px;
+body .contenedorGrilla .mainGrilla #carouselIndex {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  max-width: 600px;
+}
+body .contenedorGrilla .mainGrilla .carousel-item {
+  height: 500px;
+}
+body .contenedorGrilla .mainGrilla .carousel-caption {
+  bottom: 10px; /* Position text at the bottom */
+  background: rgba(0, 0, 0, 0.5);
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners for text background */
+}
+body .contenedorGrilla .mainGrilla .carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+body .contenedorGrilla .mainGrilla .carousel-control-prev {
+  left: 30px;
+}
+body .contenedorGrilla .mainGrilla .carousel-control-next {
+  right: 30px;
 }
 body .contenedorGrilla .asideGrilla {
   grid-area: asideGrilla;
@@ -94,11 +128,14 @@ body .aboutus {
   background-image: url(../IMG/bg\ aboutus.jpg);
 }
 body .aboutus .subtitle {
+  margin: 10px;
+  padding: 1%;
   background-color: hsla(0, 0%, 94%, 0.6);
   color: black;
   text-align: center;
 }
 body .aboutus p {
+  padding: 5%;
   line-height: 1.3;
   font-size: 1.3rem;
   font-family: "Farsan", cursive;
@@ -145,6 +182,46 @@ body .galeria .contenedorImagen:hover .imagenTexto1 {
   border: solid white 2px;
 }
 body .galeria .contenedorImagen .imagenTexto1 {
+  opacity: 0;
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  width: 80%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 10%;
+}
+body .productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .productos .contenedorImagen {
+  position: relative;
+  width: 400px; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+  overflow: hidden; /* Hide overflow if needed */
+}
+body .productos .contenedorImagen img {
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  padding: 5px;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+body .productos .contenedorImagen:hover .imagenTexto1 {
+  opacity: 1;
+  border: solid white 2px;
+}
+body .productos .contenedorImagen .imagenTexto1 {
   opacity: 0;
   position: absolute;
   bottom: 15px;
